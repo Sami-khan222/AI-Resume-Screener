@@ -36,7 +36,7 @@ export default function App() {
               </p>
             </div>
             <a
-              href="https://digitalheroes.com"
+              href="https://digitalheroesco.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center rounded-lg bg-[var(--color-primary)] px-6 py-3 font-medium text-black transition-all hover:opacity-90 hover:shadow-lg"

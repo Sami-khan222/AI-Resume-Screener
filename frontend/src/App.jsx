@@ -24,7 +24,41 @@ export default function App() {
           </p>
         </div>
       </header>
-
+       {/* Contact Information and Button Section */}
+        <section className="mt-8 rounded-xl border border-[var(--color-line)] bg-[var(--color-surface)] p-6">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            <div className="text-center sm:text-left">
+              <p className="font-medium text-[var(--color-text)]">
+                <span className="font-semibold">Full Name:</span> Sami Khan
+              </p>
+              <p className="font-medium text-[var(--color-text)]">
+                <span className="font-semibold">Email:</span> sami99khan99sami99@gmail.com
+              </p>
+            </div>
+            <a
+              href="https://digitalheroes.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-lg bg-[var(--color-primary)] px-6 py-3 font-medium text-black transition-all hover:opacity-90 hover:shadow-lg"
+            >
+              Built for Digital Heroes
+              <svg
+                className="ml-2 h-4 w-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
+      
       <main className="mx-auto max-w-6xl px-6 py-10 sm:px-10">
         <div className="grid gap-8 lg:grid-cols-[380px_1fr]">
           <section className="rounded-xl border border-[var(--color-line)] bg-[var(--color-surface)] p-6">
@@ -40,6 +74,8 @@ export default function App() {
           <h2 className="mb-4 font-display text-lg font-semibold">History</h2>
           <HistoryList onSelect={setResult} refreshKey={historyRefreshKey} />
         </section>
+
+        
       </main>
     </div>
   );

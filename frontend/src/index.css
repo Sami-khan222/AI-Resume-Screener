@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color system: warm paper background, ink text, forest = good match, rust = flagged issue */
+  --color-paper: #faf8f3;
+  --color-surface: #ffffff;
+  --color-ink: #1c2230;
+  --color-muted: #5b6472;
+  --color-forest: #2f5d4f;
+  --color-forest-light: #d9e8e2;
+  --color-amber: #b8842a;
+  --color-amber-light: #f3e6cd;
+  --color-rust: #c1531b;
+  --color-rust-light: #f4e0d4;
+  --color-line: #e4e1d8;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  /* Always-visible keyboard focus ring, never silently removed */
+  :focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.animate-scanline {
+  animation: scanline 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-scanline {
+    animation: none;
+  }
+}
